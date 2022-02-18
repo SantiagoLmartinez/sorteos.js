@@ -11,11 +11,18 @@ _formSorteo.addEventListener('submit', (e)=>{
 
     // Validacion de inputs
     if( min === "" ){
-        console.log('No ingresaste valor minimo')
+        alert('No ingresaste valor minimo')
+        _formSorteo.reset()
         return
     }
     if(max === ""){
-        console.log('Ingresar valor maximo por favor')
+        alert('Ingresar valor maximo por favor')
+        _formSorteo.reset()
+        return
+    }
+    if(max < min){
+        alert('El numero minimo debe ser menor al maximo')
+        _formSorteo.reset()
         return
     }
     
