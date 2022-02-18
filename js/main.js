@@ -1,6 +1,7 @@
 // console.log('Conectado con html')
 const _formSorteo = document.getElementById('formSorteo')
 const _numGanador = document.getElementById('numGanador')
+const _numeroGanadorContainer = document.getElementById('numeroGanadorContainer')
 
 // Eventslistener
 _formSorteo.addEventListener('submit', (e)=>{
@@ -27,10 +28,15 @@ _formSorteo.addEventListener('submit', (e)=>{
     }
     
     // console.log( sortearNumeroAleatoreo(min,max))
+    mostrarNumeroGanadorDom()
     _numGanador.innerHTML = `${sortearNumeroAleatoreo(min,max)}`
 
 })
 // funcion para obtener numero aleatoreo
 const sortearNumeroAleatoreo = (min, max) => {
     return parseInt(Math.random() * (max - min) + min);
+}
+// funcion para mostrar numero ganador en el DOM
+const mostrarNumeroGanadorDom = () =>{
+    _numeroGanadorContainer.classList.remove('d-none')
 }
