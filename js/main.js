@@ -8,6 +8,16 @@ _formSorteo.addEventListener('submit', (e)=>{
     // console.log('diste click en el botton')
     const data = new FormData(_formSorteo)
     const [min, max] = [...data.values()]
+
+    // Validacion de inputs
+    if( min === "" ){
+        console.log('No ingresaste valor minimo')
+        return
+    }
+    if(max === ""){
+        console.log('Ingresar valor maximo por favor')
+        return
+    }
     
     // console.log( sortearNumeroAleatoreo(min,max))
     _numGanador.innerHTML = `${sortearNumeroAleatoreo(min,max)}`
