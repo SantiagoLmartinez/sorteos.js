@@ -15,11 +15,19 @@
             <form class="" id="formSorteo">
                 <div>
                     <label for="" class="form-label">Minimo</label>
-                    <input type="number" class="form-control w-25" placeholder="Ej: 1">
+                    <input type="number"
+                            name="numMin"
+                            class="form-control w-25"
+                            value="1"
+                            min="1"
+                            placeholder="Ej: 1">
                 </div>
                 <div>
-                    <label for="" class="form-label ">parametro 2</label>
-                    <input type="text" class="form-control w-25" placeholder="Ej: 25/50/75/100">
+                    <label for="" class="form-label ">Maximo</label>
+                    <input type="number"
+                            name="nunMax"
+                            class="form-control w-25"
+                            placeholder="Ej: 25/50/75/100">
                 </div>
                 <div>
                     <button  type="submit" class="btn btn-primary my-3">Sortear</button>
@@ -28,7 +36,7 @@
         </section>
         <hr>
         <section>
-            <p>El numero ganador es :<span class="numGanador"></span></p>
+            <h2>El numero ganador es : <span class="badge bg-success" id="numGanador"></span></h2>
         </section>
     </div>
     <!-- Scripts -->
